@@ -8,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './logowanie.component.css'
 })
 export class LogowanieComponent {
+  formData = {
+    username: '',
+    password: ''
+  };
 
+  logowanie() {
+    if (this.formData.username === 'admin' && this.formData.password === 'admin'){
+      console.log('Zalogowano pomyślnie');
+    } else {
+      console.log('Błąd logowania');
+    }
+  }
 }
